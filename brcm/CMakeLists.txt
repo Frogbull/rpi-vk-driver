@@ -9,7 +9,7 @@ file(GLOB brcmSrc
 	"qpu/*.c"
 )
 
-find_program(python REQUIRED)
+find_package(Python3 REQUIRED)
 
 add_custom_command(
   OUTPUT cle/v3d_packet_v21_pack.h
