@@ -1,3 +1,4 @@
+#include "profiler.h"
 #include "common.h"
 #include "modeset.h"
 
