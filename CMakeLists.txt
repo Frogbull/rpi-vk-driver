@@ -19,6 +19,15 @@ project (rpi-vulkan-driver
 	LANGUAGES C CXX
 )
 
+# Workaround for strdup strnlen etc.
+add_compile_definitions(_GNU_SOURCE)
+
+# Workaround for old code compatibility
+add_compile_options(
+    -Wno-int-conversion
+    -Wno-incompatible-pointer-types
+)
+
 include(options)
 include(sysroot)
 include(global)
